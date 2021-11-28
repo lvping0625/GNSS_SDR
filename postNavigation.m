@@ -167,7 +167,8 @@ for currMeasNr = 1:fix((settings.msToProcess - max(subFrameStart)) / ...
 
     % 3D receiver position can be found only if signals from more than 3
     % satellites are available  
-    if size(activeChnList, 2) > 3
+    %if size(activeChnList, 2) > 3
+    if length(activeChnList) > 3
 
         %=== Calculate receiver position ==================================
         [xyzdt, ...
