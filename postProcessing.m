@@ -107,7 +107,7 @@ if (fid > 0)
     disp (['   Tracking started at ', datestr(startTime)]);
 
     % Process all channels for given data block
-    [trackResults, channel] = tracking(fid, channel, settings);
+%     [trackResults, channel] = tracking(fid, channel, settings);
 
     % Close the data file
     fclose(fid);
