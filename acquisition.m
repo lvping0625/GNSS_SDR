@@ -89,7 +89,6 @@ fprintf('(');
 
 % Perform search for all listed PRN numbers ...
 for PRN = settings.acqSatelliteList
-
 %% Correlate signals ======================================================   
     %--- Perform DFT of C/A code ------------------------------------------
     caCodeFreqDom = conj(fft(caCodesTable(PRN, :)));
