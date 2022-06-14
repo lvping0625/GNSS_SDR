@@ -79,7 +79,7 @@ if (fid > 0)
         
         % Read data for acquisition. 11ms of signal are needed for the fine
         % frequency estimation
-        data = fread(fid, 11*samplesPerCode, settings.dataType)';
+        data = fread(fid, 11*samplesPerCode, settings.dataType)';%捕获需要11ms的数据
 
         %--- Do the acquisition -------------------------------------------
         disp ('   Acquiring satellites...');
@@ -107,7 +107,7 @@ if (fid > 0)
     disp (['   Tracking started at ', datestr(startTime)]);
 
     % Process all channels for given data block
-%     [trackResults, channel] = tracking(fid, channel, settings);
+    [trackResults, channel] = tracking(fid, channel, settings);%程序分析过程中，把这行注释掉节省运行时间
 
     % Close the data file
     fclose(fid);
